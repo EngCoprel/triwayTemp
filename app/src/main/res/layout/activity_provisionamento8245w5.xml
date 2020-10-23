@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".eg8245w5.Provisionamento8245w5"
+
+    android:id="@+id/root_layout_8245w5"
+    >
+
+    <WebView
+        android:id="@+id/web_view_8245w5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        />
+
+    <Button
+        android:id="@+id/buttonnext_8245w5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:onClick="nextButton"
+        android:text="WAN Configuration"
+        android:textColor="@android:color/background_light" />
+
+
+</LinearLayout>
