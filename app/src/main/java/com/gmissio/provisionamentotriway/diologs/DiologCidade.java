@@ -23,7 +23,7 @@ public class DiologCidade extends AppCompatDialogFragment {
 
         builder.setTitle("CIDADE");
         // add a radio button list
-        String[] animals = {"ARROIO GRANDE","BOA VISTA DO INCRA","CAMPOS BORGES","CARAZINHO","CONDOR","COTOVELO","CRUZ ALTA","ERNESTINA","ESPUMOSO","FORTALEZA DOS VALOS","GENTIL","IBIRUBA","MARAU","MATO CASTELHANO","NAO ME TOQUE","PANAMBI","PASSO FUNDO","PEJUCARA","PONTAO","SANTA BARBARA DO SUL","SELBACH","TAPEJARA","TAPERA","TIO HUGO","VICTOR GRAEFF","XV DE NOVEMBRO","LAGOA DOS TRES CANTOS"};
+        String[] animals = {"ARROIO GRANDE","BOA VISTA DO INCRA","CAMPOS BORGES","CARAZINHO","CONDOR","COTOVELO","CRUZ ALTA","ERNESTINA","ESPUMOSO","FORTALEZA DOS VALOS","GENTIL","IBIRUBA","MARAU","MATO CASTELHANO","NICOLAU VERGUEIRO","NAO ME TOQUE","PANAMBI","PASSO FUNDO","PEJUCARA","PONTAO","SANTA BARBARA DO SUL","SELBACH","TAPEJARA","TAPERA","TIO HUGO","VICTOR GRAEFF","XV DE NOVEMBRO","LAGOA DOS TRES CANTOS"};
         final int checkedItem = 0; // boa vista
         builder.setSingleChoiceItems(animals, checkedItem, new DialogInterface.OnClickListener() {
             @Override
@@ -86,54 +86,58 @@ public class DiologCidade extends AppCompatDialogFragment {
                         vlan = 290;
                         break;
                     case 14:
+                        //nicolau vergueiro
+                        vlan = 233;
+                        break;
+                    case 15:
                         //nao me toque
                         vlan = 257;
                         break;
-                    case 15:
+                    case 16:
                         //panambi
                         vlan = 245;
                         break;
-                    case 16:
+                    case 17:
                         //passo fundo
                         vlan = 202;
                         break;
-                    case 17:
+                    case 18:
                         //pejucara
                         vlan = 296;
                         break;
-                    case 18:
+                    case 19:
                         //pontao
                         vlan = 281;
                         break;
-                    case 19:
+                    case 20:
                         //santa barbara do sul
                         vlan = 248;
                         break;
-                    case 20:
+                    case 21:
                         //selbach
                         vlan = 251;
                         break;
-                    case 21 :
+                    case 22:
                         //tapejara
                         vlan = 209;
                         break;
-                    case 22:
+                    case 23:
                         //tapera
                         vlan = 254;
                         break;
-                    case 23:
+                    case 24:
                         //tio hugo
                         vlan = 205;
                         break;
-                    case 24:
+                    case 25:
                         //victor graeff
                         vlan = 263;
                         break;
-                    case 25:
+                    case 26:
                         //xv de novembro
                         vlan = 269;
                         break;
-                    case 26:
+                    case 27:
                         //lagoa
                         vlan = 13;
                         break;

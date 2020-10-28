@@ -13,6 +13,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+//import do interpretador de Python
+//import com.google.common.base.Predicate;
+//import org.python.util.PythonInterpreter;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.gmissio.provisionamentotriway.R;

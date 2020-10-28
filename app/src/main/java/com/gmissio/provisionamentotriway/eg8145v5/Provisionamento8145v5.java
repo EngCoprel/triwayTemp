@@ -538,7 +538,7 @@ public class Provisionamento8145v5 extends AppCompatActivity {
 
         final String js = "javascript: " +
                 "document.getElementById('btnsaveandreboot').click();" +
-                //   "confirm();" +
+                //"document.elementFromPoint(809, 582).click();" +
                 "";
 
         mWebView.setWebViewClient(new WebViewClient(){
