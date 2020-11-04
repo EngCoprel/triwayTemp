@@ -14,6 +14,7 @@ import com.gmissio.provisionamentotriway.conectividade.Conectividade;
 import com.gmissio.provisionamentotriway.diologs.DiologCidade;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamento;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamentoEmergencia;
+import com.gmissio.provisionamentotriway.diologs.DiologProvisionamentoTelefonia;
 import com.gmissio.provisionamentotriway.diologs.DiologSsidPassword;
 import com.gmissio.provisionamentotriway.diologs.Modelo;
 import com.gmissio.provisionamentotriway.eg8120l5.Provisionamento8120l5;
@@ -22,12 +23,16 @@ import com.gmissio.provisionamentotriway.eg8145v5.SsidPassword;
 import com.gmissio.provisionamentotriway.eg8120l.Provisionamento8120l;
 import com.gmissio.provisionamentotriway.eg8245w5.Provisionamento8245w5;
 
-public class MainActivity extends AppCompatActivity implements DiologProvisionamento.DiologProvisionamentoListener, DiologSsidPassword.DiologProvisionamentoListener, DiologCidade.TesteDiologListener, DiologProvisionamentoEmergencia.DiologProvisionamentoListener, Modelo.TesteDiologListener {
+public class MainActivity extends AppCompatActivity implements DiologProvisionamento.DiologProvisionamentoListener, DiologProvisionamentoTelefonia.DiologProvisionamentoListener, DiologSsidPassword.DiologProvisionamentoListener, DiologCidade.TesteDiologListener, DiologProvisionamentoEmergencia.DiologProvisionamentoListener, Modelo.TesteDiologListener {
 
 
     private Button emergence;
-    private  String user;
-    private  String pass;
+    private String user;
+    private String pass;
+    private Boolean option;
+    private String ip;
+    private String mask;
+    private String gateway;
     private TextView textView;
     private Button teste;
     private ImageView imageLogo;
@@ -84,12 +89,19 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
 
     }
 
+    public void ConfigTelefonia(View view){
+        DiologProvisionamentoTelefonia diologProvisionamento = new DiologProvisionamentoTelefonia();
+        diologProvisionamento.show(getSupportFragmentManager(), "diolog provisionamento telefonia");
+
+    }
+
     @Override
     public void aplicarTexts(String username, String password) {
         if (username.isEmpty() || password.isEmpty()){
             Toast t = Toast.makeText(getApplicationContext(),"CAMPOS INVALIDOS",Toast.LENGTH_SHORT);//.show();
             t.show();
         }else {
+            option = false;
             user = username;
             pass = password;
             diologCidade();
@@ -97,6 +109,22 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
 //            intent.putExtra("password", password);
 //            intent.putExtra("vlan", vlan);
 //            startActivity(intent);
+        }
+
+    }
+
+    //Diolog IPoE
+    //@Override
+    public void aplicarTexts(Boolean option, String ip, String mask, String gateway) {
+        if (ip.isEmpty() || mask.isEmpty() || gateway.isEmpty()){
+            Toast t = Toast.makeText(getApplicationContext(),"CAMPOS INVALIDOS",Toast.LENGTH_SHORT);//.show();
+            t.show();
+        }else {
+            this.option = option;
+            this.ip = ip;
+            this.mask = mask;
+            this.gateway = gateway;
+            diologCidade();
         }
 
     }
@@ -147,6 +175,7 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
             Toast t = Toast.makeText(getApplicationContext(),"CAMPOS INVALIDOS",Toast.LENGTH_SHORT);//.show();
             t.show();
         }else {
+            option = false;
             user = username;
             pass = password;
             this.vlan = vlan;
@@ -163,8 +192,12 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
                 Toast t8145V5 = Toast.makeText(getApplicationContext(),"PROVISIONAMENTO EG8145V5",Toast.LENGTH_SHORT);//.show();
                 t8145V5.show();
                 Intent intent8145v5 = new Intent(this, Provisionamento8145v5.class);
+                intent8145v5.putExtra("option", option);
                 intent8145v5.putExtra("username", user);
                 intent8145v5.putExtra("password", pass);
+                intent8145v5.putExtra("ip", ip);
+                intent8145v5.putExtra("mask", mask);
+                intent8145v5.putExtra("gateway", gateway);
                 intent8145v5.putExtra("vlan", this.vlan);
                 startActivity(intent8145v5);
                 break;
