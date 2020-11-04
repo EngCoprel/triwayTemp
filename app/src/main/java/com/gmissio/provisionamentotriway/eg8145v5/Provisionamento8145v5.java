@@ -31,13 +31,13 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     private WebView mWebView;
     private Button nextButton;
 
-    private Boolean option;
-    private String username;
-    private String password;
-    private String ip;
-    private String mask;
-    private String gateway;
-    private String vlan;
+    private Boolean option; //Marcador para identificar se a configuração é PPPoE ou IPoE
+    private String username; //Username do PPPoE
+    private String password; //Password do PPPoE
+    private String ip; //IP para telefonia
+    private String mask; //Máscara de subrede para telefonia
+    private String gateway; //Gateway para telefonia
+    private String vlan; //VLAN - Varia conforme conf PPPoE e IPoE
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,7 +87,7 @@ public class Provisionamento8145v5 extends AppCompatActivity {
             }
         });
 
-        //setar info PPPoE ou IPoE
+        //SETAR INFO PARA CONF PPOE E IPOE
         Bundle extras = getIntent().getExtras();
         option = extras.getBoolean("option");
         //Informações para conf PPPoE

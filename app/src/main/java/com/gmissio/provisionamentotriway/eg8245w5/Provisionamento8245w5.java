@@ -35,9 +35,13 @@ public class Provisionamento8245w5 extends AppCompatActivity {
     private WebView mWebView;
     private Button nextButton;
 
-    private String username;
-    private String password;
-    private String vlan;
+    private Boolean option; //Marcador para identificar se a configuração é PPPoE ou IPoE
+    private String username; //Username do PPPoE
+    private String password; //Password do PPPoE
+    private String ip; //IP para telefonia
+    private String mask; //Máscara de subrede para telefonia
+    private String gateway; //Gateway para telefonia
+    private String vlan; //VLAN - Varia conforme conf PPPoE e IPoE
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,10 +91,17 @@ public class Provisionamento8245w5 extends AppCompatActivity {
             }
         });
 
-        //setar username, password a vlan id
+        //SETAR INFO PARA CONF PPOE E IPOE
         Bundle extras = getIntent().getExtras();
+        option = extras.getBoolean("option");
+        //Informações para conf PPPoE
         username = extras.getString("username");
         password = extras.getString("password");
+        //Informações para conf IPoE
+        ip = extras.getString("ip");
+        mask = extras.getString("mask");
+        gateway = extras.getString("gateway");
+        //Varia de acordo com o tipo
         vlan = extras.getString("vlan");
 
         nextButton.setEnabled(false);
@@ -312,18 +323,39 @@ public class Provisionamento8245w5 extends AppCompatActivity {
         mWebView.loadUrl(url);
         mWebView.getSettings().setJavaScriptEnabled(true);
 
-        final String js = "javascript: " +
-                "clickAdd('wanInstTable_head');" +
-                "document.getElementById('VlanId').value='"+vlan+"';" +
-                "radioEncapMode = document.getElementById('EncapMode2'); radioEncapMode.checked = true; OnChangeEncapMode(this);" +
-                "comboProtocolType = document.getElementById('ProtocolType'); comboProtocolType.selectedIndex = 2;" +
-                "comboWanMode = document.getElementById('WanMode');" +
-                "comboServiceType = document.getElementById('ServiceList'); comboServiceType.selectedIndex = 2;" +
-                "comboPolicy = document.getElementById('PriorityPolicy'); comboPolicy.selectedIndex = 1;" +
-                "document.getElementById('UserName').value='"+username+"';" +
-                "document.getElementById('Password').value='"+password+"';" +
-                "document.getElementById('ButtonApply').click();" +
-                "";
+        final String js;
+
+        if(option == true){
+            //Configuração por IPoE
+            js = "javascript: " +
+                    "clickAdd('wanInstTable_head');" +
+                    "document.getElementById('VlanId').value='"+vlan+"';" +
+                    "radioEncapMode = document.getElementById('EncapMode1'); radioEncapMode.checked = true; OnChangeEncapMode(this);" +
+                    "comboProtocolType = document.getElementById('ProtocolType'); comboProtocolType.selectedIndex = 0;" +
+                    "comboWanMode = document.getElementById('WanMode');" +
+                    "comboServiceType = document.getElementById('ServiceList'); comboServiceType.selectedIndex = 1;" +
+                    "comboPolicy = document.getElementById('PriorityPolicy'); comboPolicy.selectedIndex = 1;" +
+                    "radioIPv4AddressMode = document.getElementById('IPv4AddressMode1'); radioIPv4AddressMode.checked = true; OnChangeIPv4AddressType(this);" +
+                    "document.getElementById('IPv4IPAddress').value='"+ip+"';" +
+                    "document.getElementById('IPv4SubnetMask').value='"+mask+"';" +
+                    "document.getElementById('IPv4DefaultGateway').value='"+gateway+"';" +
+                    "document.getElementById('ButtonApply').click();" +
+                    "";
+        }else {
+            //Configuração por PPPoE
+            js = "javascript: " +
+                    "clickAdd('wanInstTable_head');" +
+                    "document.getElementById('VlanId').value='" + vlan + "';" +
+                    "radioEncapMode = document.getElementById('EncapMode2'); radioEncapMode.checked = true; OnChangeEncapMode(this);" +
+                    "comboProtocolType = document.getElementById('ProtocolType'); comboProtocolType.selectedIndex = 2;" +
+                    "comboWanMode = document.getElementById('WanMode');" +
+                    "comboServiceType = document.getElementById('ServiceList'); comboServiceType.selectedIndex = 2;" +
+                    "comboPolicy = document.getElementById('PriorityPolicy'); comboPolicy.selectedIndex = 1;" +
+                    "document.getElementById('UserName').value='" + username + "';" +
+                    "document.getElementById('Password').value='" + password + "';" +
+                    "document.getElementById('ButtonApply').click();" +
+                    "";
+        }
 
         mWebView.setWebViewClient(new WebViewClient(){
 

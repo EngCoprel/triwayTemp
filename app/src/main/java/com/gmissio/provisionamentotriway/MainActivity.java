@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.gmissio.provisionamentotriway.conectividade.Conectividade;
 import com.gmissio.provisionamentotriway.diologs.DiologCidade;
+import com.gmissio.provisionamentotriway.diologs.DiologCidadeTelefonia;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamento;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamentoEmergencia;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamentoTelefonia;
@@ -23,7 +24,7 @@ import com.gmissio.provisionamentotriway.eg8145v5.SsidPassword;
 import com.gmissio.provisionamentotriway.eg8120l.Provisionamento8120l;
 import com.gmissio.provisionamentotriway.eg8245w5.Provisionamento8245w5;
 
-public class MainActivity extends AppCompatActivity implements DiologProvisionamento.DiologProvisionamentoListener, DiologProvisionamentoTelefonia.DiologProvisionamentoListener, DiologSsidPassword.DiologProvisionamentoListener, DiologCidade.TesteDiologListener, DiologProvisionamentoEmergencia.DiologProvisionamentoListener, Modelo.TesteDiologListener {
+public class MainActivity extends AppCompatActivity implements DiologProvisionamento.DiologProvisionamentoListener, DiologProvisionamentoTelefonia.DiologProvisionamentoListener, DiologSsidPassword.DiologProvisionamentoListener, DiologCidade.TesteDiologListener, DiologCidadeTelefonia.TesteDiologListener, DiologProvisionamentoEmergencia.DiologProvisionamentoListener, Modelo.TesteDiologListener {
 
 
     private Button emergence;
@@ -124,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
             this.ip = ip;
             this.mask = mask;
             this.gateway = gateway;
-            diologCidade();
+            diologCidadeTelefonia();
         }
 
     }
@@ -145,6 +146,11 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
     }
     public void diologCidade() {
         DiologCidade diologProvisionamento = new DiologCidade();
+        diologProvisionamento.show(getSupportFragmentManager(), "diolog cidade");
+    }
+
+    public void diologCidadeTelefonia() {
+        DiologCidadeTelefonia diologProvisionamento = new DiologCidadeTelefonia();
         diologProvisionamento.show(getSupportFragmentManager(), "diolog cidade");
     }
 
@@ -208,6 +214,10 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
                 intent8120l.putExtra("username", user);
                 intent8120l.putExtra("password", pass);
                 intent8120l.putExtra("vlan", this.vlan);
+                intent8120l.putExtra("option", option);
+                intent8120l.putExtra("ip", ip);
+                intent8120l.putExtra("mask", mask);
+                intent8120l.putExtra("gateway", gateway);
                 startActivity(intent8120l);
                 break;
             case 3:
@@ -217,6 +227,10 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
                 intent8120l5.putExtra("username", user);
                 intent8120l5.putExtra("password", pass);
                 intent8120l5.putExtra("vlan", this.vlan);
+                intent8120l5.putExtra("option", option);
+                intent8120l5.putExtra("ip", ip);
+                intent8120l5.putExtra("mask", mask);
+                intent8120l5.putExtra("gateway", gateway);
                 startActivity(intent8120l5);
                 break;
             case 4:
@@ -226,6 +240,10 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
                 intent8245h5.putExtra("username", user);
                 intent8245h5.putExtra("password", pass);
                 intent8245h5.putExtra("vlan", this.vlan);
+                intent8245h5.putExtra("option", option);
+                intent8245h5.putExtra("ip", ip);
+                intent8245h5.putExtra("mask", mask);
+                intent8245h5.putExtra("gateway", gateway);
                 startActivity(intent8245h5);
                 break;
             case 5:
@@ -235,6 +253,10 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
                 intent8245w5.putExtra("username", user);
                 intent8245w5.putExtra("password", pass);
                 intent8245w5.putExtra("vlan", this.vlan);
+                intent8245w5.putExtra("option", option);
+                intent8245w5.putExtra("ip", ip);
+                intent8245w5.putExtra("mask", mask);
+                intent8245w5.putExtra("gateway", gateway);
                 startActivity(intent8245w5);
                 break;
             case 6:
@@ -244,6 +266,10 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
                 intent8145a5.putExtra("username", user);
                 intent8145a5.putExtra("password", pass);
                 intent8145a5.putExtra("vlan", this.vlan);
+                intent8145a5.putExtra("option", option);
+                intent8145a5.putExtra("ip", ip);
+                intent8145a5.putExtra("mask", mask);
+                intent8145a5.putExtra("gateway", gateway);
                 startActivity(intent8145a5);
                 break;
         }

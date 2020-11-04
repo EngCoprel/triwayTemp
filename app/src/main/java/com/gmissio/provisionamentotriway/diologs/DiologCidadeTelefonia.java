@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class DiologCidade extends AppCompatDialogFragment {
+public class DiologCidadeTelefonia extends AppCompatDialogFragment {
 
     public int vlan = 160;
     private TesteDiologListener listener;
@@ -31,115 +31,115 @@ public class DiologCidade extends AppCompatDialogFragment {
                 switch (which){
                     case 0:
                         //arroio grande
-                        vlan = 160;
+                        vlan = 240;
                         break;
                     case 1:
                         //boa vista
-                        vlan = 284;
+                        vlan = 283;
                         break;
                     case 2:
                         //campos borges
-                        vlan = 293;
+                        vlan = 292;
                         break;
                     case 3:
                         //carazinho
-                        vlan = 266;
+                        vlan = 265;
                         break;
                     case 4:
                         //condor
-                        vlan = 272;
+                        vlan = 271;
                         break;
                     case 5:
                         //cotovelo
-                        vlan = 276;
+                        vlan = 275;
                         break;
                     case 6:
                         //cruz alta
-                        vlan = 242;
+                        vlan = 241;
                         break;
                     case 7:
                         //ernestina
-                        vlan = 260;
+                        vlan = 259;
                         break;
                     case 8:
                         //espumoso
-                        vlan = 278;
+                        vlan = 277;
                         break;
                     case 9:
                         //fortaleza
-                        vlan = 197;
+                        vlan = 196;
                         break;
                     case 10:
                         //gentil
-                        vlan = 219;
+                        vlan = 218;
                         break;
                     case 11:
                         //ibiruba
-                        vlan = 160;
+                        vlan = 240;
                         break;
                     case 12:
                         //marau
-                        vlan = 287;
+                        vlan = 286;
                         break;
                     case 13:
                         //mato castelhano
-                        vlan = 290;
+                        vlan = 289;
                         break;
                     case 14:
                         //nicolau vergueiro
-                        vlan = 223;
+                        vlan = 222;
                         break;
                     case 15:
                         //nao me toque
-                        vlan = 257;
+                        vlan = 256;
                         break;
                     case 16:
                         //panambi
-                        vlan = 245;
+                        vlan = 244;
                         break;
                     case 17:
                         //passo fundo
-                        vlan = 202;
+                        vlan = 201;
                         break;
                     case 18:
                         //pejucara
-                        vlan = 296;
+                        vlan = 295;
                         break;
                     case 19:
                         //pontao
-                        vlan = 281;
+                        vlan = 280;
                         break;
                     case 20:
                         //santa barbara do sul
-                        vlan = 248;
+                        vlan = 247;
                         break;
                     case 21:
                         //selbach
-                        vlan = 251;
+                        vlan = 250;
                         break;
                     case 22:
                         //tapejara
-                        vlan = 209;
+                        vlan = 208;
                         break;
                     case 23:
                         //tapera
-                        vlan = 254;
+                        vlan = 253;
                         break;
                     case 24:
                         //tio hugo
-                        vlan = 205;
+                        vlan = 204;
                         break;
                     case 25:
                         //victor graeff
-                        vlan = 263;
+                        vlan = 262;
                         break;
                     case 26:
                         //xv de novembro
-                        vlan = 269;
+                        vlan = 268;
                         break;
                     case 27:
                         //lagoa
-                        vlan = 13;
+                        vlan = 100;
                         break;
                 }
             }
