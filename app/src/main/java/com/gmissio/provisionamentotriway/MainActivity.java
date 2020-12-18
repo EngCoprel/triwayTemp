@@ -19,9 +19,11 @@ import com.gmissio.provisionamentotriway.diologs.DiologProvisionamentoTelefonia;
 import com.gmissio.provisionamentotriway.diologs.DiologSsidPassword;
 import com.gmissio.provisionamentotriway.diologs.Modelo;
 import com.gmissio.provisionamentotriway.eg8120l5.Provisionamento8120l5;
+import com.gmissio.provisionamentotriway.eg8145a5.Provisionamento8145a5;
 import com.gmissio.provisionamentotriway.eg8145v5.Provisionamento8145v5;
 import com.gmissio.provisionamentotriway.eg8145v5.SsidPassword;
 import com.gmissio.provisionamentotriway.eg8120l.Provisionamento8120l;
+import com.gmissio.provisionamentotriway.eg8245h5.Provisionamento8245h5;
 import com.gmissio.provisionamentotriway.eg8245w5.Provisionamento8245w5;
 
 public class MainActivity extends AppCompatActivity implements DiologProvisionamento.DiologProvisionamentoListener, DiologProvisionamentoTelefonia.DiologProvisionamentoListener, DiologSsidPassword.DiologProvisionamentoListener, DiologCidade.TesteDiologListener, DiologCidadeTelefonia.TesteDiologListener, DiologProvisionamentoEmergencia.DiologProvisionamentoListener, Modelo.TesteDiologListener {
@@ -236,7 +238,7 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
             case 4:
                 Toast t8245h5 = Toast.makeText(getApplicationContext(),"PROVISIONAMENTO EG8245H5",Toast.LENGTH_SHORT);//.show();
                 t8245h5.show();
-                Intent intent8245h5 = new Intent(this, Provisionamento8145v5.class);
+                Intent intent8245h5 = new Intent(this, Provisionamento8245h5.class);
                 intent8245h5.putExtra("username", user);
                 intent8245h5.putExtra("password", pass);
                 intent8245h5.putExtra("vlan", this.vlan);
@@ -244,7 +246,7 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
                 intent8245h5.putExtra("ip", ip);
                 intent8245h5.putExtra("mask", mask);
                 intent8245h5.putExtra("gateway", gateway);
-                startActivity(intent8245h5);
+                startActivity(intent8245h5); //Mesmo do v5
                 break;
             case 5:
                 Toast t8245w5 = Toast.makeText(getApplicationContext(),"PROVISIONAMENTO EG8245W5",Toast.LENGTH_SHORT);//.show();
@@ -262,7 +264,7 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
             case 6:
                 Toast t8145a5 = Toast.makeText(getApplicationContext(),"PROVISIONAMENTO EG8145A5",Toast.LENGTH_SHORT);//.show();
                 t8145a5.show();
-                Intent intent8145a5 = new Intent(this, Provisionamento8245w5.class);
+                Intent intent8145a5 = new Intent(this, Provisionamento8145a5.class);
                 intent8145a5.putExtra("username", user);
                 intent8145a5.putExtra("password", pass);
                 intent8145a5.putExtra("vlan", this.vlan);
@@ -270,7 +272,7 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
                 intent8145a5.putExtra("ip", ip);
                 intent8145a5.putExtra("mask", mask);
                 intent8145a5.putExtra("gateway", gateway);
-                startActivity(intent8145a5);
+                startActivity(intent8145a5); //Mesmo do w5
                 break;
         }
 
