@@ -1,0 +1,3 @@
+# triwayTemp
+
+Aplicativo de provisionamento.
