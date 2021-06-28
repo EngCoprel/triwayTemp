@@ -51,7 +51,7 @@ public class DiologCidade extends AppCompatDialogFragment {
                         break;
                     case 5:
                         //cotovelo
-                        vlan = 276;
+                        vlan = 275;
                         break;
                     case 6:
                         //cruz alta

@@ -75,6 +75,11 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
 
     }//fim do onCreate
 
+    public void TestarSinal(View view){
+        Intent intent = new Intent(this, Conectividade.class);
+        startActivity(intent);
+    }
+
     public void TestarConectividade(View view){
         Intent intent = new Intent(this, Conectividade.class);
         startActivity(intent);
