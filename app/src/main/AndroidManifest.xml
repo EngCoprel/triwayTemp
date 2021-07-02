@@ -14,6 +14,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".conectividade.Conectividade"></activity>
+        <activity android:name=".conectividade.Sinal"></activity>
+        <activity android:name=".conectividade.PPPoE"></activity>
         <activity android:name=".eg8120l5.Provisionamento8120l5" />
         <activity android:name=".eg8120l.Provisionamento8120l" />
         <activity android:name=".eg8145v5.SsidPassword" />

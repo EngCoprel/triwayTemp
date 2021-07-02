@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.gmissio.provisionamentotriway.conectividade.Conectividade;
+import com.gmissio.provisionamentotriway.conectividade.PPPoE;
+import com.gmissio.provisionamentotriway.conectividade.Sinal;
 import com.gmissio.provisionamentotriway.diologs.DiologCidade;
 import com.gmissio.provisionamentotriway.diologs.DiologCidadeTelefonia;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamento;
@@ -76,7 +78,12 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
     }//fim do onCreate
 
     public void TestarSinal(View view){
-        Intent intent = new Intent(this, Conectividade.class);
+        Intent intent = new Intent(this, Sinal.class);
+        startActivity(intent);
+    }
+
+    public void VerificarPPPoE(View view){
+        Intent intent = new Intent(this, PPPoE.class);
         startActivity(intent);
     }
 
