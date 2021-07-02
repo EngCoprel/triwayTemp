@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Provisionamento Coprel Telecom</string>
     <string name="app_version">V3.7</string>
+
+    <string name="ajuda1">Ajuda1</string>
+    <string name="ajuda2">Ajuda2</string>
+    <string name="ajuda3">Ajuda3</string>
+
+    <string-array name="ajuda1">
+        <item>Aqui fica o texto dentro do bagulho 1.</item>
+    </string-array>
+    <string-array name="ajuda2">
+        <item>Aqui fica o texto dentro do bagulho 2.</item>
+    </string-array>
+    <string-array name="ajuda3">
+        <item>Aqui fica o texto dentro do bagulho 3.</item>
+    </string-array>
 </resources>

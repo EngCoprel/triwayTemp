@@ -301,8 +301,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_pppoe" />
-                            <entry key="sourceFile" value="C:\Users\Telecom15\Documents\pppoe.svg" />
+                            <entry key="outputName" value="ic_ajuda" />
+                            <entry key="sourceFile" value="C:\Users\Telecom15\Documents\ajuda.svg" />
                           </map>
                         </option>
                       </PersistentState>

@@ -13,17 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".conectividade.Conectividade"></activity>
-        <activity android:name=".conectividade.Sinal"></activity>
-        <activity android:name=".conectividade.PPPoE"></activity>
+        <activity android:name=".ajuda.AjudaActivity"></activity>
+        <activity android:name=".conectividade.Conectividade" />
+        <activity android:name=".conectividade.Sinal" />
+        <activity android:name=".conectividade.PPPoE" />
         <activity android:name=".eg8120l5.Provisionamento8120l5" />
         <activity android:name=".eg8120l.Provisionamento8120l" />
         <activity android:name=".eg8145v5.SsidPassword" />
         <activity android:name=".eg8145v5.Provisionamento8145v5" />
         <activity android:name=".eg8245w5.Provisionamento8245w5" />
-
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
