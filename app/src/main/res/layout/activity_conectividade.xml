@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/primary_gradient"
         android:text="TESTE DE CONECTIVIDADE"
         android:textColor="@android:color/background_light" />
 
