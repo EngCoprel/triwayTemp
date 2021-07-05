@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.gmissio.provisionamentotriway.ajuda.AjudaActivity;
 import com.gmissio.provisionamentotriway.conectividade.Conectividade;
 import com.gmissio.provisionamentotriway.conectividade.PPPoE;
 import com.gmissio.provisionamentotriway.conectividade.Sinal;
@@ -76,6 +77,10 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
 
 
     }//fim do onCreate
+    public void Ajuda(View view){
+        Intent intent = new Intent(this, AjudaActivity.class);
+        startActivity(intent);
+    }
 
     public void TestarSinal(View view){
         Intent intent = new Intent(this, Sinal.class);

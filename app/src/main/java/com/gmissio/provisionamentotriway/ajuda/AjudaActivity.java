@@ -36,6 +36,9 @@ public class AjudaActivity extends AppCompatActivity {
         topicos.add(getString(R.string.ajuda1));
         topicos.add(getString(R.string.ajuda2));
         topicos.add(getString(R.string.ajuda3));
+        topicos.add(getString(R.string.ajuda4));
+        topicos.add(getString(R.string.ajuda5));
+
 
         String[] array;
 
@@ -54,10 +57,22 @@ public class AjudaActivity extends AppCompatActivity {
         for (String item : array){
             list3.add(item);
         }
+        List<String> list4 = new ArrayList<>();
+        array = getResources().getStringArray(R.array.ajuda4);
+        for (String item : array){
+            list4.add(item);
+        }
+        List<String> list5 = new ArrayList<>();
+        array = getResources().getStringArray(R.array.ajuda5);
+        for (String item : array){
+            list5.add(item);
+        }
 
         listItem.put(topicos.get(0),list1);
         listItem.put(topicos.get(1),list2);
         listItem.put(topicos.get(2),list3);
+        listItem.put(topicos.get(3),list4);
+        listItem.put(topicos.get(4),list5);
 
         adapter.notifyDataSetChanged();
     }

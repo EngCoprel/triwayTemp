@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.27" />
+        app:layout_constraintGuide_percent="0.4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -75,18 +75,18 @@
 
     <ImageView
         android:id="@+id/imageLogo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="274dp"
+        android:layout_height="136dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.439"
         app:srcCompat="@color/ic_launcher_background" />
 
     <Button
@@ -143,20 +143,16 @@
         android:id="@+id/btnSinal2"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="476dp"
         android:background="@drawable/rounded_button_secondary"
         android:drawableStart="@drawable/ic_ajuda"
-        android:onClick="TestarSinal"
+        android:onClick="Ajuda"
         android:paddingLeft="8dp"
         android:textColor="@color/ic_launcher_background"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -165,9 +161,10 @@
         android:text="@string/app_version"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        android:textStyle="bold"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,17 +2,125 @@
     <string name="app_name">Provisionamento Coprel Telecom</string>
     <string name="app_version">V3.7</string>
 
-    <string name="ajuda1">Ajuda1</string>
-    <string name="ajuda2">Ajuda2</string>
-    <string name="ajuda3">Ajuda3</string>
+    <string name="ajuda1">Como o APP funciona?</string>
+    <string name="ajuda2">Para que serve cada botão?</string>
+    <string name="ajuda3">Como configurar o PPPoE na ONU?</string>
+    <string name="ajuda4">Como configurar o a ONU para telefonia?</string>
+    <string name="ajuda5">Como configurar o WiFi do cliente na ONU?</string>
 
     <string-array name="ajuda1">
-        <item>Aqui fica o texto dentro do bagulho 1.</item>
+        <item>
+            Este aplicativo foi preparado para a configuração e provisionamento da ONU Huawei do cliente de forma automática.Nele, você somente precisará selecionar o tipo de configuração que pretende fazer, preencher os campos solicitados e deixar o aplicativo agir.\n\n
+            Quando a configuração estiver ocorrendo, o aplicativo acessará a página de configuração e fará todo o processo automaticamente em sua tela, então não se assuste ao ver seu celular ganhando vida própria, ainda não é a revolução das máquinas acontecendo (eu disse ainda).\n\n
+            Dependendo do modelo da ONU, a página de configuração poderá solicitar que você dê um OK. Infelizmente esse aplicativo ainda não é inteligente o bastante para responder OK para a ONU quando ela abre um POP-UP.\n\n
+            Abaixo, na tela, haverá sempre um botão dizendo o que está ocorrendo no momento. Se você notar que o processo está parado, você pode tentar clicar nele para avançar para a próxima etapa de maneira manual, contudo, tenha paciência, o aplicativo tem seu próprio tempo de agir.
+        </item>
     </string-array>
     <string-array name="ajuda2">
-        <item>Aqui fica o texto dentro do bagulho 2.</item>
+        <item>
+            Na página inicial do aplicativo você notará que há vários botões com cores, simbolos e títulos diferentes.
+            Os botões em cor escura, com título em texto, são botões de configuração. Abaixo farei uma descrição mais detalhada de cada um.
+            Já os botões em cor azul claro, com ícones, são botões de teste, onde você verificará se a conexão e configurações estão funcionando.
+        </item>
+        <item>
+            CLIENTE TELEFONIA\n\n
+            Este botão serve para os casos de configuração de clientes que possuem telefonia fixa. Nele será configurado um IP fixo e uma vlan de telefonia para o telefone.
+        </item>
+        <item>
+            CLIENTE PPPOE\n\n
+            Este botão é usado para configurar o PPPoE em clientes de internet. Nele a ONU é provisionada e configurada para que o cliente tenha acessoa à internet.
+        </item>
+        <item>
+            CONFIGURAR WIFI\n\n
+            Aqui você irá configurar de maneira rápida um usuário e senha para o acesso do wifi do cliente.
+        </item>
+        <item>
+            TESTE DE CONECTIVIDADE\n\n
+            O primeiro botão azul claro, com ícone de corrente, é o Teste de Conectividade.
+            Nele você pode verificar se o seu dispositivo está conseguindo acessar a página de configurações da ONU.
+            Ao clicar nele, o aplicativo tentará acessar a página inicial da ONU.
+            Caso a tela permaneça branca por muito tempo ou apareça uma mensagem de erro, você não está conectado à ONU.
+        </item>
+        <item>
+            VERIFICAÇÃO DE PPPOE\n\n
+            O segundo botão azul claro, com ícone de rede, é a Verificação de PPPoE.
+            Ao clicar nele, o aplicativo acessará a página com as informações do PPPoE da ONU.
+            Assim, você poderá verificar se as configurações estão corretas.
+        </item>
+        <item>
+            VERIFICAÇÃO DE SINAL\n\n
+            O último botão azul claro, com ícone de barras, é a Verificação de Sinal.
+            Lá você acessará a página com as informações do nível de sinal em dB (decibéis) da ONU.
+            Em geral, o sinal não pode ficar abaixo de -27dB, ou problemas de conexão ocorrerão para o cliente.
+        </item>
     </string-array>
     <string-array name="ajuda3">
-        <item>Aqui fica o texto dentro do bagulho 3.</item>
+        <item>
+            Para configurar o PPPoE, siga os seguintes passos:
+        </item>
+        <item>
+            1. Clique no botão "Cliente PPPoE".
+        </item>
+        <item>
+            2. Preencha o usuário e senha do PPPoE.
+        </item>
+        <item>
+            3. Selecione a cidade na qual a ONU está sendo provisionada.
+        </item>
+        <item>
+            4. Selecione o modelo da ONU que está sendo provisionada.
+        </item>
+        <item>
+            5. Espere o aplicativo realizar as configurações. (Obs.: caso note que o aplicativo permenece em uma mesma página por mais de 10 segundos, clique no botão abaixo para forçá-lo a avançar para a próxima etapa).
+        </item>
+        <item>
+            6. A depender do modelo de ONU, poderá aparecer um POP-UP na tela solicitando permissão para aplicar as configurações e reiniciar a ONU. Se ocorrer, toque em OK e aguarde o processo continuar.
+        </item>
+        <item>
+            7. Quando as configurações estiverem concluídas, a ONU será automaticamente reiniciada. Com isso você poderá sair da página de configuração do APP e partir para outras configurações ou verificar se as configurações estão corretas.
+        </item>
+    </string-array>
+    <string-array name="ajuda4">
+        <item>
+            Para configurar o telefonia, siga os seguintes passos:
+        </item>
+        <item>
+            1. Clique no botão "Cliente Telefonia".
+        </item>
+        <item>
+            2. Preencha o IP, máscara de rede e gateway.
+        </item>
+        <item>
+            3. Selecione a cidade na qual a ONU está sendo provisionada.
+        </item>
+        <item>
+            4. Selecione o modelo da ONU que está sendo provisionada.
+        </item>
+        <item>
+            5. Espere o aplicativo realizar as configurações. (Obs.: caso note que o aplicativo permenece em uma mesma página por mais de 10 segundos, clique no botão abaixo para forçá-lo a avançar para a próxima etapa).
+        </item>
+        <item>
+            6. A depender do modelo de ONU, poderá aparecer um POP-UP na tela solicitando permissão para aplicar as configurações e reiniciar a ONU. Se ocorrer, toque em OK e aguarde o processo continuar.
+        </item>
+        <item>
+            7. Quando as configurações estiverem concluídas, a ONU será automaticamente reiniciada. Com isso você poderá sair da página de configuração do APP e partir para outras configurações ou verificar se as configurações estão corretas.
+        </item>
+    </string-array>
+    <string-array name="ajuda5">
+        <item>
+            Para configurar o WiFi, siga os seguintes passos:
+        </item>
+        <item>
+            1. Clique no botão "Configurar WiFi".
+        </item>
+        <item>
+            2. Preencha o nome da rede WiFi e senha escolhidos pelo cliente para acesso ao WiFi. Caso a ONU possua duas frequências de WiFi (2.4 e 5.8), preencha o nome da rede e senha de cada uma das frequências separadamente. (Obs.: É recomendável que se use o número da frequência no nome da rede para identificá-la. Ex.: teste2.4 e teste5.8. Também é recomendável instruir o cliente de que a rede 5.8 atinge velocidades superiores, mas com um alcance menor entre os cômodos).
+        </item>
+        <item>
+            5. Espere o aplicativo realizar as configurações. (Obs.: caso note que o aplicativo permenece em uma mesma página por mais de 10 segundos, clique no botão abaixo para forçá-lo a avançar para a próxima etapa).
+        </item>
+        <item>
+            7. Quando as configurações estiverem concluídas, a ONU será automaticamente reiniciada. Com isso você poderá sair da página de configuração do APP e partir para outras configurações ou verificar se as configurações estão corretas.
+        </item>
     </string-array>
 </resources>
